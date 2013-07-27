@@ -23,7 +23,16 @@ module extruder() {
 
       //clamp
       translate([20, 0, 28]) cube([13, 20, 14]);
-    }
+		
+	    translate([16,20,21]) rotate([90,0,0]){
+		   rotate([0,0,45]) {
+	        //translate([14,0,0]) cylinder(h=22, r=1.6, $fn=12);
+	        translate([0,15,0]) cylinder(h=20, r=5, $fn=24);
+	        translate([-15,0,0]) cylinder(h=20, r=5, $fn=24);
+	        translate([0,-15,0]) cylinder(h=20,r=5, $fn=24);
+	      }
+    	}
+	}
 
     //pulley opening
     translate([16,21,21]) rotate([90,0,0]){
@@ -31,21 +40,21 @@ module extruder() {
 
       rotate([0,0,45]) {
         //translate([14,0,0]) cylinder(h=22, r=1.6, $fn=12);
-        translate([0,14,0]) cylinder(h=22, r=1.6, $fn=12);
-        translate([-14,0,0]) cylinder(h=22, r=1.6, $fn=12);
-        translate([0,-14,0]) cylinder(h=22, r=1.6, $fn=12);
+        translate([0,15,0]) cylinder(h=22, r=1.6, $fn=12);
+        translate([-15,0,0]) cylinder(h=22, r=1.6, $fn=12);
+        translate([0,-15,0]) cylinder(h=22, r=1.6, $fn=12);
       }
     }
 
     //gearhead indentation
-    translate([16,21,21]) rotate([90,0,0]) cylinder (h=3.35, r=11.25);
+    translate([16,21,21]) rotate([90,0,0]) cylinder (h=3.35, r=11.5);
 
     //pulley hub indentation
     translate([16,20-2,21]) rotate([90,0,0]) cylinder (h=5.6, r=7);
 
     //bearing screws
     translate([31,21,21]) rotate([90,0,0]) cylinder (h=22, r=2.6, $fn=12);
-    #translate([31,22,21]) rotate([90,30,0]) cylinder (h=8.01, r=4.7, $fn=6);
+    translate([31,22,21]) rotate([90,30,0]) cylinder (h=8.01, r=4.7, $fn=6);
 
     //bearing
     difference() {
@@ -57,20 +66,20 @@ module extruder() {
       }
       //removable supports
       for (z = [15:3:27]) {
-        translate([36, 10, z]) # cube([20, 20, 0.5], center=true);
+        translate([36, 10, z])  cube([20, 20, 0.5], center=true);
       }
     }
 
     //filament path chamfer
-    translate([filament_offset,6.5,15]) rotate([0,0,0]) #
+    translate([filament_offset,6.5,15]) rotate([0,0,0]) 
       cylinder(h=3, r1=0.5, r2=3, $fn=12);
 
     //filament path
-    translate([filament_offset,6.5,-10]) rotate([0,0,0]) #
+    translate([filament_offset,6.5,-10]) rotate([0,0,0]) 
       cylinder(h=60, r=1.1, $fn=12);
 
     //pushfit/pneufit mount
-    translate([filament_offset, 6.5, 0]) # cylinder(r=2.3, h=8, $fn=12);
+    translate([filament_offset, 6.5, 0])  cylinder(r=1.5, h=8, $fn=12);
 
     //clamp slit
     translate([25,-1,10]) cube([2, 22, 35]);

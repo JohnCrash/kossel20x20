@@ -1,5 +1,5 @@
 // Increase this if your slicer or printer make holes too tight.
-extra_radius = 0.1;
+extra_radius = 0.20;
 
 // OD = outside diameter, corner to corner.
 m3_nut_od = 6.1;
@@ -19,4 +19,19 @@ thickness = 3.6;
 
 // OpenBeam or Misumi. Currently only 15x15 mm, but there is a plan
 // to make models more parametric and allow 20x20 mm in the future.
-extrusion = 15;
+//extrusion = 15;
+extrusion = 20;
+//extrusion_block_width = 2.5; //15x15
+extrusion_block_width = 6.1; //20x20
+
+//corner_radius = 36; //15x15
+corner_radius = 40; //20x20
+
+//extrusion_offset = 0;//15x15
+extrusion_offset = -2.5; //20x20
+
+//height_offset = 0; //15x15
+height_offset = -extrusion_offset; //20x20
+
+//screw_offset=-7.5; //15x15
+screw_offset=-12; //20x20
