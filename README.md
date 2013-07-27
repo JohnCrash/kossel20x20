@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Release status
 ==============
 
@@ -41,3 +42,9 @@ If you're interested, please email johann@rocholl.net and let me know
 your favorite PLA color and mailing address. If you want to get your
 printed parts first, explain why you're more qualified than others to
 start giving away high quality printed parts soon.
+=======
+kossel20x20
+===========
+
+scad source
+>>>>>>> cce76dabf2352457aa02cc0f23a5b00312168b90
