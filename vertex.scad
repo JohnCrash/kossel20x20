@@ -72,7 +72,7 @@ module vertex(height, idler_offset, idler_space) {
         }
         cylinder(r=roundness, h=1, center=true);
       }
-      translate([0,extrusion_offset,0])extrusion_cutout(height+10, 3*extra_radius);
+      translate([0,extrusion_offset,0])extrusion_cutout(height+10, 2*extra_radius);
       for (z = [0:24:height]) {
         translate([0, -12-extra_radius, z+7.5-height/2+2.5]) rotate([90, 0, 0])
           screw_socket_cone();

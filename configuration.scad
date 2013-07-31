@@ -1,9 +1,14 @@
 // Increase this if your slicer or printer make holes too tight.
-extra_radius = 0.20;
+extra_radius = 0.30;
 
 // OD = outside diameter, corner to corner.
+//六角螺母
 m3_nut_od = 6.1;
 m3_nut_radius = m3_nut_od/2 + 0.2 + extra_radius;
+m4_nut_od = 8;
+m4_nut_radius = m4_nut_od/2 + 0.2 +extra_radius;
+m3_nut_height = 2.4;
+m4_nut_height = 3.2;
 
 // Major diameter of metric 3mm thread.
 m3_major = 2.85;

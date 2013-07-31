@@ -67,5 +67,26 @@ module carriage() {
     }
   }
 }
+//GT2齿面
+module gt2(l,w)
+{
+	//cube([1,l,w]);
+	for(n=[0:2:l])
+	{
+		translate([0,n,0])cylinder(r=1/cos(30),h=w,$fn=3);
+	}
+}
 
+module test_gt2(s)
+{
+	union()
+	{
+		gt2(w=6,l=20);
+		translate([-5,0,-4])cube([11,20,4]);
+		translate([1/cos(30)+s+extra_radius,0,0])cube([4,20,6]);
+		translate([-4.5,0,0])cube([4,20,6]);
+	}
+}
+
+translate([0,0,10])test_gt2(s=0.8);
 carriage();
