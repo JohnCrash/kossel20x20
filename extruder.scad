@@ -100,4 +100,4 @@ module extruder() {
 }
 
 extruder();
-translate([16,-21,9])rotate([0,0,180])extruder_wheel(r=8);
+//translate([16,-21,9])rotate([0,0,180])extruder_wheel(r=8);

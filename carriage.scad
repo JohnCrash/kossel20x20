@@ -29,33 +29,36 @@ module carriage() {
           translate([horn_x, 16, horn_thickness/2]) rotate([0, 90, 0])
             cylinder(r1=14, r2=2.5, h=separation/2-horn_x);
         }
-      }
+      }//for
       // Belt clamps.
       difference() {
         union() {
-          translate([6.5, -2.5, horn_thickness/2+1])
-            cube([14, 7, horn_thickness-2], center=true);
-          translate([10.75, 2.5, horn_thickness/2+1])
-            cube([5.5, 16, horn_thickness-2], center=true);
+      //   translate([6.5, -2.5, horn_thickness/2+1])
+      //      cube([14, 7, horn_thickness-2], center=true);
+      //   translate([10.75, 2.5, horn_thickness/2+1])
+      //      cube([5.5, 16, horn_thickness-2], center=true);
         }
         // Avoid touching diagonal push rods (carbon tube).
-        translate([20, -10, 12.5]) rotate([35, 35, 30])
-          cube([40, 40, 20], center=true);
+      //  translate([20, -10, 12.5]) rotate([35, 35, 30])
+      //    cube([40, 40, 20], center=true);
       }
-      for (y = [-12, 7]) {
-        translate([1.25, y, horn_thickness/2+1])
-          cube([7, 8, horn_thickness-2], center=true);
-      }
-    }
+	translate([5, -12-3, thickness])gt2(w=8,l=25);
+	translate([-2.5,-16,thickness])cube([7,26,8]);
+	translate([9,-16,thickness])cube([5,26,8]);
+ /*     for (y = [-12, 7]) {
+    #    translate([1.25, y, thickness+4])
+          cube([7, 8, 8], center=true);
+      } */
+    }//union
     // Screws for linear slider.
     for (x = [-10, 10]) {
       for (y = [-10, 10]) {
-        translate([x, y, thickness]) #
+        translate([x, y, thickness]) 
           cylinder(r=m3_wide_radius, h=30, center=true, $fn=12);
       }
     }
     // Screws for ball joints.
-    translate([0, 16, horn_thickness/2]) rotate([0, 90, 0]) #
+    translate([0, 16, horn_thickness/2]) rotate([0, 90, 0]) 
       cylinder(r=m3_wide_radius, h=60, center=true, $fn=12);
     // Lock nuts for ball joints.
     for (x = [-1, 1]) {
@@ -82,11 +85,11 @@ module test_gt2(s)
 	union()
 	{
 		gt2(w=6,l=20);
-		translate([-5,0,-4])cube([11,20,4]);
-		translate([1/cos(30)+s+extra_radius,0,0])cube([4,20,6]);
+		translate([-4.5,0,-3])cube([11,20,3]);
+		translate([1/cos(30)+s+0.2+extra_radius,0,0])cube([4,20,6]);
 		translate([-4.5,0,0])cube([4,20,6]);
 	}
 }
 
-translate([0,0,10])test_gt2(s=0.8);
+//translate([0,0,10])test_gt2(s=0.7);
 carriage();
