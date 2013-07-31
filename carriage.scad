@@ -9,6 +9,7 @@ horn_x = 8;
 belt_width = 5;
 belt_x = 5.6;
 belt_z = 7;
+belt_gas = 1/cos(30)+0.7+0.2+extra_radius;
 
 module carriage() {
   // Timing belt (up and down).
@@ -42,9 +43,17 @@ module carriage() {
       //  translate([20, -10, 12.5]) rotate([35, 35, 30])
       //    cube([40, 40, 20], center=true);
       }
-	translate([5, -12-3, thickness])gt2(w=8,l=25);
-	translate([-2.5,-16,thickness])cube([7,26,8]);
-	translate([9,-16,thickness])cube([5,26,8]);
+//卡带槽
+	union()
+	{
+		translate([5-1, -15, thickness])gt2(w=7,l=25);
+//		translate([5-1, -15+16, thickness])gt2(w=7,l=10);
+		translate([-2.5-1,-16,thickness])cube([7,26.5,7]);
+//		translate([-2.5-1,-16+16,thickness])cube([7,12,7]);
+//		translate([5-3, -15+11.5, thickness])rotate([0,0,90])gt2(w=7,l=5);
+//		translate([-2, -15+14.5, thickness])rotate([0,0,-90])gt2(w=7,l=5);
+		translate([5-1+belt_gas,-16,thickness])cube([7+0.15,26+3,7]);
+	}
  /*     for (y = [-12, 7]) {
     #    translate([1.25, y, thickness+4])
           cube([7, 8, 8], center=true);
