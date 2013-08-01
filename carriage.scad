@@ -46,9 +46,9 @@ module carriage() {
 //卡带槽
 	union()
 	{
-		translate([5-1, -15, thickness])gt2(w=7,l=25);
+		translate([5-1-0.4, -15, thickness])gt2(w=7,l=25);
 //		translate([5-1, -15+16, thickness])gt2(w=7,l=10);
-		translate([-2.5-1,-16,thickness])cube([7,26.5,7]);
+		translate([-2-1+0.9+0.2,-16,thickness])cube([5,26.5,7]);
 //		translate([-2.5-1,-16+16,thickness])cube([7,12,7]);
 //		translate([5-3, -15+11.5, thickness])rotate([0,0,90])gt2(w=7,l=5);
 //		translate([-2, -15+14.5, thickness])rotate([0,0,-90])gt2(w=7,l=5);
@@ -63,12 +63,12 @@ module carriage() {
     for (x = [-10, 10]) {
       for (y = [-10, 10]) {
         translate([x, y, thickness]) 
-          cylinder(r=m3_wide_radius, h=30, center=true, $fn=12);
+          cylinder(r=1.5, h=30, center=true, $fn=12);
       }
     }
     // Screws for ball joints.
     translate([0, 16, horn_thickness/2]) rotate([0, 90, 0]) 
-      cylinder(r=m3_wide_radius, h=60, center=true, $fn=12);
+      cylinder(r=1.2, h=60, center=true, $fn=12);
     // Lock nuts for ball joints.
     for (x = [-1, 1]) {
       scale([x, 1, 1]) intersection() {
