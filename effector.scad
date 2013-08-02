@@ -26,7 +26,7 @@ module effector() {
 		cylinder(r1=cone_r2, r2=cone_r1, h=14, center=true, $fn=24);
 	    }
 	    rotate([0, 90, 0])
-	      cylinder(r=m3_radius, h=separation+1, center=true, $fn=12);
+	      cylinder(r=1.0, h=separation+1, center=true, $fn=12);
 	    rotate([90, 0, 90])
 	      cylinder(r=m3_nut_radius, h=separation-24, center=true, $fn=6);
 	  }
