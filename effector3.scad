@@ -82,8 +82,10 @@ module nozzel_shelf(h)
 			}
 		}
 		cylinder(r=9,h=h-8);
-		translate([0,0,h-8])cylinder(r1=9,r2=3,h=7);
-		translate([0,0,h-8+4])cylinder(r=3,h=20,$fn=24);
+		translate([0,0,h-8])cylinder(r1=9,r2=2.5,h=7);
+		translate([0,0,h-8+4])cylinder(r=2.5,h=20,$fn=24);
+	#	translate([0,0,32])cylinder(r=(3+extra_radius)/cos(30),h=4,$fn=6);
+		translate([0,0,32.5])rotate([0,0,30])cylinder(r=3.,h=4,$fn=6);
 		translate([0,0,23])difference()
 		{
 			cylinder(r=20,h=20);
