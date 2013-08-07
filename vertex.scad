@@ -97,6 +97,6 @@ module vertex(height, idler_offset, idler_space) {
   }
 }
 
-translate([0, 0, 7.5]) vertex(2.2*20, idler_offset=0, idler_space=10);
+//translate([0, 0, 7.5]) vertex(2.2*20, idler_offset=0, idler_space=10);
 
 //translate([0, 0, 35]) vertex(15, idler_offset=0, idler_space=10);
