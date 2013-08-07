@@ -1,0 +1,131 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=GBK">
+<meta http-equiv="Cache-Control" content="no-cache"/>
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="expires" content="Thu, 01 Jan 1970 00:00:00 GMT" />
+<title>立即下载</title>
+<link type="text/css" rel="stylesheet" href="http://e.bst2.126.net/fs/0031/style/css/base/coremail.css" />
+<link type="text/css" rel="stylesheet" href="http://e.bst2.126.net/fs/0031/style/css/base/reset.css" />
+<style type="text/css">
+.dot{font-family:simsun;}
+</style>
+</head>
+<body id="page-163-com">
+	<div class="page">
+	<div class="header clearfix">
+		<h1 class="logo">			
+				<a href="http://mail.163.com/" target="_blank"><img src="http://mimg.126.net/logo/163logo.gif" width="136px" height="32px" /></a>
+		</h1>		
+		<div id="usMsg" style="display:none;" class="wel">你好，<strong></strong> <a id="logout" href="#">[退出]</a></div>
+		<div class="ext">
+			<a target="_blank" href="http://zhidao.mail.163.com/zhidao/newsugg.jsp#附件">问题反馈</a>
+			<span> | </span>
+			<a target="_blank" href="http://help.163.com/09/1013/14/5LGT3NOK00752VCP.html">帮助</a>
+			<span> | </span>
+			<a target="_blank" onclick="location.href=location.href.replace('&language=zh','').replace('&language=en','')+'&language=en'">English</a>
+		</div>
+	</div>
+	<div class="content">
+		<div id="mbDiv" class="login-mbDiv" style="display:none;">&nbsp;</div>
+		<div id="loginDiv" style="display:none;" class="login-iframe">&nbsp;</div>
+		<div id="expiredTime" class="msg msg-err" style="display:none;">
+		</div>
+		<div class="area clearfix">
+		<table class="table-main">
+			<tr>
+				<div style="border-right:solid 1px #ccc;">
+				<td class="wd1">
+				<div class="part part-main">
+					<h2 class="title">
+						超大附件下载：
+					</h2>
+					<div class="filename">
+						<div class="ico ico-file"><img src="http://mimg.126.net/xm/all/fj/ico-bfile-3.gif" /></div>
+						<h3 class="name ne-bwd">主板连接使用方法.doc</h3>
+					</div>
+					<div class="fileinfo">
+						<div>文件大小：<span>4.34M</span></div>
+						<div>到期时间：<span>2013-07-31 17:17:43</span></div>
+						<div>剩余有效时间：<span id="remainingTime">计算中...</span></div>
+					</div>
+				<!--div class="code">
+					<label class="lb">请输入验证码：</label>
+					<input id="captcha" class="ipt-t" type="text" />
+					<img id="captchaIMG" alt="验证码" />
+					<a id="changeCaptcha">看不清楚，换一张</a>
+					<span id="captchaMsg" class="tips tips-err">请先登录后获取验证码</span>
+				</div>
+				<div id="errmsg-div" class="msg msg-alert" style="display:none;">
+					你需要先登录才能下载大附件，<a id="download-b" hidefocus="hidefocus" href="#">立即登录</a>
+				</div-->
+				<div class="button">
+						<a id="download-a" class="ipt-b btn btn-std" style="color:black;display:inline-block;" hidefocus="hidefocus" target="_self">开始下载</a>					
+				</div>
+				</div>
+					<div id="enter-report" class="report">注：如果此资源包含不符合国家法律的相关内容或信息，请<a style="text-decoration:underline;cursor:pointer;" hidefocus="hidefocus" id="report">点击进行举报<img id="rp-img" src="../style/images/down.gif" /></a></div>
+					<div id="success-report" class="bgp05 report-success" style="display:none">举报成功感谢你对构建和谐社会，净化互联网环境做出的贡献！</div>
+				</div>
+				</td>
+				<td class="wd2">
+					<div class="iblock part part-sec">
+						<div class="intro">
+							<h1 class="fs14 fc02" style="margin-bottom:16px;">开通网易手机邮，即刻<span class="fw01 fc06">免费享受</span>：</h1>
+							<p class="lh-26"><strong>1.</strong>&nbsp;&nbsp;彰显尊贵身份的手机号码邮箱，您的手机号就是邮箱账号，对方知道您的手机号就能给您发邮件，如：13505710000@163.com；</p>
+								<p class="lh-26"><strong>2.</strong>&nbsp;&nbsp;邮箱2G超大容量附件服务；</p>
+								<p class="lh-26"><strong>3.</strong>&nbsp;&nbsp;用电脑发短信，解放您的大拇指。</p>
+							<p style="padding-top:10px;"><a style="margin:0 20px;" class="fw01" href="http://123.163.com/?from=fs2" target="_blank">马上开通</a><a href="http://123.163.com/help/#H0" target="_blank" class="dot">了解更多&gt;&gt;</a></p>
+						</div>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<div class="rp-form" style="display:none;" id="reportForm">
+						<h1 class="fc03 rp-title">举报本页资源，请选择举报原因:</h1>
+						<table class="rp-table" border="0" cellspacing="0" cellpadding="0">
+							<tr class="fc03"><td class="radio-td"><input onclick="Download.__onChange(0)" id="radio0" name="radio" type="radio" value="含有色情暴力内容" /></td><td>含有色情暴力内容</td></tr>
+							<tr class="fc03"><td class="radio-td"><input onclick="Download.__onChange(1)" id="radio1" name="radio" type="radio" value="这是广告" /></td><td>这是广告</td></tr>
+							<tr class="fc03"><td class="radio-td"><input onclick="Download.__onChange(2)" id="radio2" name="radio" type="radio" value="含有反动内容" /></td><td>含有反动内容</td></tr>
+							<tr class="fc03"><td class="radio-td"><input onclick="Download.__onChange(3)" id="radio3" name="radio" type="radio" value="病毒" /></td><td>病毒</td></tr>
+							<tr class="fc03"><td class="radio-td"><input onclick="Download.__onChange(4)" id="radio4" name="radio" type="radio" value="其他" /></td><td>其他<input id="other" disabled="disabled" style="margin-left:5px;" type="text" /></td></tr>
+						</table>
+						<div style="margin-top:15px;margin-left:10px;"><input style="overflow:visible;" onclick="Download.__onReport();" type="button" value="举报资源" /><input id="cnl-btn" style="margin-left:10px;overflow:visible;" onclick="Download.__onReportHide();" type="button" value="取消" /></div>
+					</div>
+				</td>
+				<td></td>
+			</tr>
+			</table>			
+			</div>
+		</div>
+	</div>
+	<div class="footer">
+		<div><a target="_blank" href="http://corp.163.com/">About&nbsp;NetEase</a><span>|</span>
+		        <a target="_blank" href="http://gb.corp.163.com/gb/about/overview.html">公司简介</a><span>|</span>
+		        <a target="_blank" href="http://gb.corp.163.com/gb/contactus.html">联系方法</a><span>|</span>
+		        <a target="_blank" href="http://corp.163.com/gb/job/job.html">招聘信息</a><span>|</span>
+		        <a target="_blank" href="http://help.163.com/">客户服务</a><span>|</span>
+		        <a target="_blank" href="http://gb.corp.163.com/gb/legal.html">相关法律</a><span>|</span>
+		        <a target="_blank" href="http://emarketing.biz.163.com/">网络营销</a>
+		</div>
+	    <div class="fc02">Copyright&nbsp;&copy;&nbsp;1997-2010&nbsp;网易公司版权所有</div>
+	</div>
+	</div>
+</body>
+<script type="text/javascript" src="http://e.bst2.126.net/fs/0031/js/gen/lib.js"></script>
+<script type="text/javascript">
+	owner = 'wenzhi185@163.com';
+	us = '';
+	downloadlink = 'http://fs-104.fs.163.com/dl/?file=becycFmHw0rybPXBfbMuTLN642dJy2CtUNjM7r-a965EAoS_7eFShxXGPHJ1k21lwCKyaCAHGVEYfvnOuNPqRg';
+	file = 'becycFmHw0rybPXBfbMuTLN642dJy2CtUNjM7r-a965EAoS_7eFShxXGPHJ1k21lwCKyaCAHGVEYfvnOuNPqRg';
+	product = '163mail';
+	lExpiredTime = '1375262263223';
+	uuid = '2c39505e-4744-419f-948c-a32142399842';
+	error = '';
+	downloadCountLimit = '';
+	sExpiredTime = '2013-07-31 17:17:43';
+	sCurrentTime = 1373967242891;
+</script>
+<script type="text/javascript" src="http://e.bst2.126.net/fs/0031/js/gen/mail-download.js"></script>
+</html>
