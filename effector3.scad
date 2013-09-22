@@ -1,9 +1,9 @@
 include <configuration.scad>
 
 separation = 40;  // Distance between ball joint mounting faces.
-offset = 20;  // Same as DELTA_EFFECTOR_OFFSET in Marlin.
-mount_radius = 12.5;  // Hotend mounting screws, standard would be 25mm.
-hotend_radius = 8;  // Hole for the hotend (J-Head diameter is 16mm).
+offset = 20+1;  // Same as DELTA_EFFECTOR_OFFSET in Marlin.
+mount_radius = 13.5;//12.5;  // Hotend mounting screws, standard would be 25mm.
+hotend_radius = 4;//8;  // Hole for the hotend (J-Head diameter is 16mm).
 push_fit_height = 4;  // Length of brass threaded into printed plastic.
 height = 8;
 cone_r1 = 2.5;
@@ -36,12 +36,14 @@ module effector() {
     translate([0, 0, -5])
       cylinder(r=9, h=10, $fn=36);
 //    translate([0, 0, -6]) # import("m5_internal.stl");
-//    for (a = [0:60:359]) rotate([0, 0, a]) {
-//      translate([0, mount_radius, 0])
-//	cylinder(r=m3_wide_radius, h=2*height, center=true, $fn=12);
-//    }
+    for (a = [0:60:359]) rotate([0, 0, a]) {
+      translate([0, mount_radius, 0])
+	cylinder(r=m3_wide_radius, h=2*height, center=true, $fn=12);
+    }
   }
 }
+
+effector();
 
 module nozzel_tube()
 {
@@ -84,7 +86,7 @@ module nozzel_shelf(h)
 		cylinder(r=9,h=h-8);
 		translate([0,0,h-8])cylinder(r1=9,r2=2.5,h=7);
 		translate([0,0,h-8+4])cylinder(r=2.5,h=20,$fn=24);
-	#	translate([0,0,32])cylinder(r=(3+extra_radius)/cos(30),h=4,$fn=6);
+		translate([0,0,32])cylinder(r=(3+extra_radius)/cos(30),h=4,$fn=6);
 		translate([0,0,32.5])rotate([0,0,30])cylinder(r=3.,h=4,$fn=6);
 		translate([0,0,23])difference()
 		{
@@ -93,5 +95,5 @@ module nozzel_shelf(h)
 		}
 	}
 }
-nozzel_shelf(h=35);
+//nozzel_shelf(h=35);
 //translate([0,0,25])nozzel_tube();
