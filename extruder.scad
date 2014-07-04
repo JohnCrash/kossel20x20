@@ -24,7 +24,7 @@ module extruder() {
       translate([filament_offset,filament_offset_y,34]) rotate([0,0,0]) cylinder (h=8, r=3, $fn=12);
 
       //clamp
- #     translate([20, 0, 31-3]) cube([13+1+2, 20, 18-1]);
+      translate([20, 0, 31-3-5]) cube([13+1+2+5, 20, 18-1+5]);
 		
 /*	    translate([16,20,21]) rotate([90,0,0]){
 		   rotate([0,0,45]) {
@@ -34,6 +34,20 @@ module extruder() {
 	        translate([0,-15,0]) cylinder(h=20,r=5, $fn=24);
 	      }
     	}*/
+		#translate([-10,0,10])rotate([0,45,0])
+		difference()
+		{
+			cube([20,35,12]);
+			translate([0,0,-5])cube([7.5,35,11]);
+			translate([12.5,0,-5])cube([7.5,35,11]);
+			translate([10,28,-10])
+			{
+				cylinder(r=3.2/2,h=30,$fn=12);
+			#	translate([0,0,17])cylinder(r=6.2/2,h=5,$fn=12);
+				
+			}
+			translate([0,0,-9])cube([20,35,12]);
+		}
 	}
 
     //pulley opening
@@ -88,14 +102,14 @@ module extruder() {
 	translate([10.5-20.5,8+2-2,38+6.5-3.5]) rotate([0,90,0])
 	rotate([0,0,30])cylinder(r=6.5,h=30,$fn=6);
     //clamp slit
-    translate([25+2,-1,12]) cube([2+extra_radius, 22, 40]);
+  #  translate([25+2,-1,12]) cube([2+extra_radius, 22, 40]);
 	translate([25+2+1,21,12]) rotate([90,0,0])cylinder(r=1+extra_radius,h=22,$fn=12);
     //clamp nut
-    translate([10.5-11,12-4,38+6.5-6]) rotate([0,90,0])
+   translate([10.5-11,12-4,38+6.5-6]) rotate([0,90,0])
       rotate([0,0,30])cylinder(h=22, r=m3_nut_radius, $fn=6);
     //clamp screw hole
-    translate([15+2,12-4,38+6.5-6]) rotate([0,90,0])
-      cylinder(h=20, r=m3_wide_radius, $fn=12);
+  #  translate([15+2,12-4,38+6.5-6]) rotate([0,90,0])
+      cylinder(h=20+20, r=m3_wide_radius, $fn=12);
   }
 }
 
