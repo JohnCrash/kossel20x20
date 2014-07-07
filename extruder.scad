@@ -43,8 +43,8 @@ module extruder() {
 			translate([10,7,-10])
 			{
 				cylinder(r=3.2/2,h=30,$fn=12);
-				translate([0,0,17])cylinder(r=6.2/2,h=5,$fn=12);
-				#translate([-5,-4,6])cube([10,7,10]);
+				translate([0,0,20])cylinder(r=6.2/2,h=5,$fn=12);
+				translate([-5,-4,6])cube([10,7,10]);
 			}
 			translate([0,0,-9])cube([20,35,12]);
 		}
