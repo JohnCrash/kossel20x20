@@ -34,17 +34,17 @@ module extruder() {
 	        translate([0,-15,0]) cylinder(h=20,r=5, $fn=24);
 	      }
     	}*/
-		#translate([-10,0,10])rotate([0,45,0])
+		translate([-10,-15,10])rotate([0,45,0])
 		difference()
 		{
 			cube([20,35,12]);
 			translate([0,0,-5])cube([7.5,35,11]);
 			translate([12.5,0,-5])cube([7.5,35,11]);
-			translate([10,28,-10])
+			translate([10,7,-10])
 			{
 				cylinder(r=3.2/2,h=30,$fn=12);
-			#	translate([0,0,17])cylinder(r=6.2/2,h=5,$fn=12);
-				
+				translate([0,0,17])cylinder(r=6.2/2,h=5,$fn=12);
+				#translate([-5,-4,6])cube([10,7,10]);
 			}
 			translate([0,0,-9])cube([20,35,12]);
 		}
