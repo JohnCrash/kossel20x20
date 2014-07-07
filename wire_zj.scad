@@ -1,0 +1,21 @@
+
+difference()
+{
+	union()
+	{
+		translate([-10,0,-20])cube([20,8,40]);
+		rotate([90,0,0])
+		{
+			cylinder(r=8,h=3,$fn=24);
+			cylinder(r=3.8,h=15,$fn=24);
+		}
+	}
+	for(z=[-12,12])
+	translate([0,10,z])
+	rotate([90,0,0])
+	{
+		cylinder(r=3.2/2,h=20,$fn=12);
+		translate([0,0,6])
+		#cylinder(r=6.2/2,h=5,$fn=12);
+	}
+}

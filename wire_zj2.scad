@@ -1,0 +1,10 @@
+difference()
+{
+	union()
+	{
+		cylinder(r=32/2,h=12,$fn=24);
+		cylinder(r=36/2,h=1,$fn=24);
+	}
+	cylinder(r=22/2,h=7,$fn=24);
+	cylinder(r=10/2,h=20,$fn=24);
+}
