@@ -1,0 +1,14 @@
+difference()
+{
+	union()
+	{
+		rotate([0,0,30])cube([40,5,10]);
+		translate([-15,0,0])cube([15,6,10]);
+		translate([32,19.4,0])
+		rotate([0,0,-3])cube([15,5,10]);
+	}
+	translate([-8,-1,5])
+	rotate([-90,0,0])cylinder(r=3.2/2,h=12,$fn=12);
+	#translate([40,15,5])
+	rotate([-90,0,0])cylinder(r=3.2/2,h=12,$fn=12);
+}
